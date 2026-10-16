@@ -2,7 +2,7 @@ name: Instagram posztok
 
 on:
   schedule:
-    - cron: "0 5 * * *"   # 07:00 (nyár) / 06:00 (tél) budapesti idő
+    - cron: "0 1 * * *"
   workflow_dispatch:
     inputs:
       date:
