@@ -1,30 +1,48 @@
-
 """
-Cikkek lekérése a deszkavizio.hu oldalról egy adott naptári napra
-(alapértelmezetten tegnapra, Europe/Budapest időzóna szerint).
+A "Főoldali fókusz cikk" kategóriába tartozó cikkek lekérése egy adott
+naptári napra (alapból "tegnap", Europe/Budapest szerint) a WordPress REST
+API-ról - a címmel, szerzővel, borítóképpel, rovattal és az első bekezdésekkel.
 
-Elsődleges út: WordPress REST API.
-Ha a REST API nem működik, HTML-fallback indul.
+Fontos részlet: a cikkeknek több kategóriájuk van (pl. "Hírek, Könyv" vagy
+"Főoldali fókusz cikk, Kritikák, Zene"). A sablont a ROVAT dönti el
+(Színház, Mozgókép, Tánc, Opera, Zene, Képzőművészet, Könyv), nem az első
+kategória - ezért a rovatot a kategórianevek közül külön keressük ki.
 """
 
 from __future__ import annotations
 
-import json
 import logging
-from dataclasses import dataclass
+import re
+import unicodedata
+from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
 
-from config import SITE_BASE_URL, WP_API_POSTS_URL, CATEGORY_FILTER
+from config import (
+    WP_API_POSTS_URL, FOCUS_CATEGORY_NAME, ROVAT_TEMPLATES, DEFAULT_ROVAT,
+    PARAGRAPHS_PER_ARTICLE, MIN_PARAGRAPH_CHARS,
+)
 
 LOCAL_TZ = ZoneInfo("Europe/Budapest")
-HEADERS = {"User-Agent": "Deszkavizio-Digest/1.0 (+daily digest bot)"}
-REQUEST_TIMEOUT = 20
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DeszkavizioInstagramBot/1.0)"}
+REQUEST_TIMEOUT = 30
+PER_PAGE = 50
 
 log = logging.getLogger(__name__)
+
+
+def norm(text: str) -> str:
+    """Ékezet-, kis/nagybetű- és írásjel-független összehasonlításhoz."""
+    text = unicodedata.normalize("NFKD", text.casefold())
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", "", text)
+
+
+FOCUS_NORM = norm(FOCUS_CATEGORY_NAME)
+ROVAT_BY_NORM = {norm(name): name for name in ROVAT_TEMPLATES}
 
 
 @dataclass
@@ -32,275 +50,211 @@ class Article:
     title: str
     url: str
     author: str
-    category: str
+    rovat: str
     image_url: str | None
     published_local_date: date
+    paragraphs: list[str] = field(default_factory=list)
+    categories: list[str] = field(default_factory=list)
 
 
 def get_target_date(reference: datetime | None = None) -> date:
-    """Alapértelmezés szerint a tegnapi napot adja vissza."""
     now_local = (reference or datetime.now(LOCAL_TZ)).astimezone(LOCAL_TZ)
     return (now_local - timedelta(days=1)).date()
 
 
-def fetch_articles_for_date(target_date: date) -> list[Article]:
-    """REST API, majd szükség esetén HTML-fallback."""
-    try:
-        articles = _fetch_via_rest_api(target_date)
-        if articles:
-            log.info(
-                "REST API-n keresztül %d cikk (dátum: %s)",
-                len(articles),
-                target_date,
-            )
-            return articles
-
-        log.warning(
-            "REST API elérhető volt, de nem adott vissza cikket erre a napra: %s",
-            target_date,
-        )
-    except Exception as exc:
-        log.warning(
-            "REST API lekérés sikertelen (%s), HTML-fallback indul.",
-            exc,
-        )
-
-    articles = _fetch_via_html(target_date)
-    log.info("HTML-fallback: %d cikk (dátum: %s)", len(articles), target_date)
-    return articles
-
-
 # ---------------------------------------------------------------------------
-# WordPress REST API
+# Lekérés
 # ---------------------------------------------------------------------------
 
-def _fetch_via_rest_api(
-    target_date: date,
-    max_pages: int = 3,
-) -> list[Article]:
+def fetch_articles_for_date(target_date: date, ignore_focus: bool = False, max_pages: int = 4) -> list[Article]:
+    """A célnapon megjelent fókusz cikkek. ignore_focus=True: az összes cikk
+    (teszteléshez, ha épp nincs fókusz cikk)."""
+    # a határokat egy-egy nappal kitoljuk, a pontos napot úgyis kliens oldalon szűrjük
+    after = (target_date - timedelta(days=1)).strftime("%Y-%m-%dT00:00:00")
+    before = (target_date + timedelta(days=2)).strftime("%Y-%m-%dT00:00:00")
+
     articles: list[Article] = []
-    page = 1
+    posts_that_day = 0
+    seen_categories: set[str] = set()
 
-    while page <= max_pages:
+    for page in range(1, max_pages + 1):
         resp = requests.get(
             WP_API_POSTS_URL,
             params={
-                "per_page": 30,
-                "page": page,
-                "_embed": 1,
-                "orderby": "date",
-                "order": "desc",
+                "per_page": PER_PAGE, "page": page, "_embed": 1,
+                "orderby": "date", "order": "desc",
+                "after": after, "before": before,
             },
             headers=HEADERS,
             timeout=REQUEST_TIMEOUT,
         )
-
-        if resp.status_code == 400:
+        if resp.status_code == 400:  # elfogytak az oldalak
             break
-
         resp.raise_for_status()
-
-        # Az utf-8-sig eltávolítja az esetleges UTF-8 BOM-ot.
-        # Így a BOM-mal kezdődő JSON-válasz is feldolgozható.
-        posts = json.loads(resp.content.decode("utf-8-sig"))
-
+        posts = resp.json()
         if not posts:
             break
 
-        stop = False
-
         for post in posts:
-            post_local_date = _parse_wp_date(post["date"]).date()
+            if _parse_wp_date(post["date"]).date() != target_date:
+                continue
+            posts_that_day += 1
+            terms = _terms(post)
+            seen_categories.update(name for tax, name in terms if tax == "category")
 
-            if post_local_date < target_date:
-                stop = True
+            is_focus = any(norm(name) == FOCUS_NORM for _, name in terms)
+            if not ignore_focus and not is_focus:
                 continue
 
-            if post_local_date != target_date:
-                continue
-
-            article = _article_from_wp_post(post)
-
-            if article and _passes_category_filter(article.category):
+            article = _article_from_post(post, terms)
+            if article:
                 articles.append(article)
 
-        if stop:
+        if len(posts) < PER_PAGE:
             break
 
-        page += 1
-
+    log.info(
+        "%s: %d cikk jelent meg, ebből %d került be (fókusz szűrés: %s)",
+        target_date, posts_that_day, len(articles), "ki" if ignore_focus else "be",
+    )
+    if posts_that_day and not articles and not ignore_focus:
+        log.warning(
+            "Aznap volt cikk, de egyik sem a '%s' kategóriában. A látott kategóriák: %s. "
+            "Ha a kategória neve más, add meg a FOCUS_CATEGORY_NAME értékét a config.py-ban.",
+            FOCUS_CATEGORY_NAME, ", ".join(sorted(seen_categories)) or "-",
+        )
     return articles
 
 
 def _parse_wp_date(date_str: str) -> datetime:
-    """A WordPress dátumát magyar helyi időként kezeli."""
-    dt = datetime.fromisoformat(date_str)
-
-    if dt.tzinfo is None:
-        return dt.replace(tzinfo=LOCAL_TZ)
-
-    return dt.astimezone(LOCAL_TZ)
+    # a WP "date" mezője a site helyi ideje, időzóna nélkül
+    return datetime.fromisoformat(date_str).replace(tzinfo=LOCAL_TZ)
 
 
-def _article_from_wp_post(post: dict) -> Article | None:
-    title = _strip_html(post.get("title", {}).get("rendered", "")).strip()
+def _terms(post: dict) -> list[tuple[str, str]]:
+    """(taxonómia, név) párok az _embed-ben kapott kifejtett kategóriákból/címkékből."""
+    out = []
+    for group in post.get("_embedded", {}).get("wp:term") or []:
+        for term in group:
+            if term.get("name"):
+                out.append((term.get("taxonomy", ""), term["name"]))
+    return out
+
+
+def pick_rovat(category_names: list[str]) -> str:
+    """Az első olyan kategória, ami egy ismert rovat; különben az alapértelmezett."""
+    for name in category_names:
+        if norm(name) in ROVAT_BY_NORM:
+            return ROVAT_BY_NORM[norm(name)]
+    log.warning("Nincs ismert rovat a kategóriák között (%s) -> %s sablon", category_names, DEFAULT_ROVAT)
+    return DEFAULT_ROVAT
+
+
+def _article_from_post(post: dict, terms: list[tuple[str, str]]) -> Article | None:
+    title = BeautifulSoup(post.get("title", {}).get("rendered", ""), "html.parser").get_text().strip()
     url = post.get("link", "")
-
     if not title or not url:
         return None
 
     embedded = post.get("_embedded", {})
-
     author = "Deszkavízió"
     authors = embedded.get("author") or []
+    if authors and authors[0].get("name"):
+        author = authors[0]["name"]
 
-    if authors:
-        author = authors[0].get("name", author)
-
-    category = "Deszkavízió"
-    terms = embedded.get("wp:term") or []
-
-    for term_group in terms:
-        for term in term_group:
-            if term.get("taxonomy") == "category" and term.get("name"):
-                category = term["name"]
-                break
-        else:
-            continue
-        break
+    category_names = [name for tax, name in terms if tax == "category"]
 
     image_url = None
     media = embedded.get("wp:featuredmedia") or []
-
     if media:
-        media0 = media[0]
-        image_url = (
-            media0.get("media_details", {})
-            .get("sizes", {})
-            .get("large", {})
-            .get("source_url")
-        ) or media0.get("source_url")
+        m = media[0]
+        # az eredeti (full) méret kell: az Instagram-kép 1080 px széles
+        image_url = m.get("source_url") or (
+            m.get("media_details", {}).get("sizes", {}).get("large", {}).get("source_url")
+        )
+
+    paragraphs = extract_paragraphs(post.get("content", {}).get("rendered", ""))
+    if len(paragraphs) < PARAGRAPHS_PER_ARTICLE:
+        log.warning("'%s': csak %d használható bekezdés van", title, len(paragraphs))
 
     return Article(
         title=title,
         url=url,
         author=author,
-        category=category,
+        rovat=pick_rovat(category_names),
         image_url=image_url,
         published_local_date=_parse_wp_date(post["date"]).date(),
+        paragraphs=paragraphs,
+        categories=category_names,
     )
 
 
-def _strip_html(text: str) -> str:
-    return BeautifulSoup(text, "html.parser").get_text()
+# ---------------------------------------------------------------------------
+# Bekezdések
+# ---------------------------------------------------------------------------
+
+_CAPTION_START = re.compile(r"^(kiemelt k[ée]p|fot[óo]k?|k[ée]p|forr[áa]s|borít[óo]k[ée]p)\s*:", re.I)
+_CAPTION_PHOTO = re.compile(r"\(\s*fot[óo]\s*:[^)]*\)\s*$", re.I)
 
 
-def _passes_category_filter(category: str) -> bool:
-    if not CATEGORY_FILTER:
+_SPLIT = "\u241e"  # kettős <br> = bekezdéshatár
+_BLOCKS = ["p", "div", "section", "li", "h2", "h3", "h4"]
+
+
+def _clean(text: str) -> str:
+    return re.sub(r"\s+", " ", text.replace("\xa0", " ")).strip()
+
+
+def _in_caption(el) -> bool:
+    if el.find_parent(["figure", "figcaption", "blockquote"]):
         return True
-
-    return category in CATEGORY_FILTER
-
-
-# ---------------------------------------------------------------------------
-# HTML-fallback
-# ---------------------------------------------------------------------------
-
-CATEGORY_PAGES = [
-    "hirek",
-    "kritikak",
-    "ajanlok",
-    "interjuk",
-    "valogatasok",
-    "szinhazoldal",
-    "mozgokep",
-    "tanc",
-    "opera",
-    "zene",
-    "kepzomuveszet",
-    "konyv",
-]
+    return any("caption" in " ".join(par.get("class", [])) for par in el.find_parents(True))
 
 
-def _fetch_via_html(target_date: date) -> list[Article]:
-    seen_urls: set[str] = set()
-    articles: list[Article] = []
+def _usable(text: str) -> bool:
+    if len(text) < MIN_PARAGRAPH_CHARS:
+        return False
+    if _CAPTION_START.match(text):
+        return False
+    if _CAPTION_PHOTO.search(text) and len(text) < 220:
+        return False
+    if re.fullmatch(r"https?://\S+", text):
+        return False
+    return True
 
-    for slug in CATEGORY_PAGES:
-        url = f"{SITE_BASE_URL}/{slug}/"
 
-        try:
-            resp = requests.get(
-                url,
-                headers=HEADERS,
-                timeout=REQUEST_TIMEOUT,
-            )
-            resp.raise_for_status()
-
-        except Exception as exc:
-            log.warning("HTML fallback: %s nem elérhető (%s)", url, exc)
+def _collect(soup: BeautifulSoup, tags: list[str], limit: int) -> list[str]:
+    result: list[str] = []
+    for el in soup.find_all(tags):
+        # csak "levél" blokkok: ha van benne másik blokk, annak a szövegét külön kapjuk meg
+        if el.name != "p" and el.find(_BLOCKS):
             continue
-
-        soup = BeautifulSoup(resp.text, "html.parser")
-
-        for card in soup.select("article"):
-            link_tag = card.select_one("h2 a, h3 a")
-
-            if not link_tag or not link_tag.get("href"):
-                continue
-
-            article_url = link_tag["href"]
-
-            if article_url in seen_urls:
-                continue
-
-            time_tag = card.select_one("time")
-            post_date = _parse_html_date(time_tag) if time_tag else None
-
-            if post_date != target_date:
-                continue
-
-            img_tag = card.select_one("img")
-            image_url = img_tag.get("src") if img_tag else None
-
-            author_tag = card.select_one(
-                ".author, .byline, .posted-by"
-            )
-            author = (
-                author_tag.get_text(strip=True)
-                if author_tag
-                else "Deszkavízió"
-            )
-
-            seen_urls.add(article_url)
-
-            articles.append(
-                Article(
-                    title=link_tag.get_text(strip=True),
-                    url=article_url,
-                    author=author,
-                    category=slug,
-                    image_url=image_url,
-                    published_local_date=post_date,
-                )
-            )
-
-    return articles
+        if _in_caption(el):
+            continue
+        for br in el.find_all("br"):
+            br.replace_with(" ")
+        text = _clean(el.get_text(""))
+        # egy blokkon belül a kettős <br> több bekezdést jelent
+        for part in text.split(_SPLIT):
+            part = _clean(part)
+            if _usable(part):
+                result.append(part)
+                if len(result) >= limit:
+                    return result
+    return result
 
 
-def _parse_html_date(time_tag) -> date | None:
-    datetime_attr = time_tag.get("datetime") if time_tag else None
+def extract_paragraphs(html: str, limit: int = PARAGRAPHS_PER_ARTICLE) -> list[str]:
+    html = html or ""
+    # <br><br> (akár szóközökkel/sortöréssel) -> bekezdéshatár-jel
+    html = re.sub(r"(?:<br\s*/?>\s*){2,}", _SPLIT, html, flags=re.I)
+    soup = BeautifulSoup(html, "html.parser")
 
-    if not datetime_attr:
-        return None
-
-    try:
-        dt = datetime.fromisoformat(datetime_attr)
-
-        if dt.tzinfo is not None:
-            return dt.astimezone(LOCAL_TZ).date()
-
-        return dt.date()
-
-    except ValueError:
-        return None
+    result = _collect(soup, ["p"], limit)
+    if len(result) < limit:
+        # tartalék: oldalszerkesztős (div-alapú) tartalom, nem <p>-kben lévő szöveg
+        alt = _collect(soup, _BLOCKS, limit)
+        if len(alt) > len(result):
+            log.info("Tartalék bekezdés-kinyerés használva (%d -> %d bekezdés)", len(result), len(alt))
+            result = alt
+    return result
