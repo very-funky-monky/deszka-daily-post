@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 import requests
 from bs4 import BeautifulSoup
 
-from config import (WP_API_POSTS_URL, FOCUS_CATEGORY_NAME, ROVAT_TEMPLATES, DEFAULT_ROVAT,
+from config import (AUTHORS, WP_API_POSTS_URL, FOCUS_CATEGORY_NAME, ROVAT_TEMPLATES, DEFAULT_ROVAT,
                     PARAGRAPHS_PER_ARTICLE, MIN_PARAGRAPH_CHARS)
 
 LOCAL_TZ = ZoneInfo("Europe/Budapest")
@@ -98,17 +98,16 @@ def _article_from_post(post: dict) -> Article | None:
     if not title or not url:
         return None
     emb = post.get("_embedded", {})
-    author = "Deszkavízió"
-    if emb.get("author"):
-        author = emb["author"][0].get("name") or author
+    author = AUTHORS.get(post.get("author"))
+    if not author:
+        if emb.get("author"):
+            author = emb["author"][0].get("name")
+        if not author:
+            log.warning("Ismeretlen szerzőkód: %s (%s)", post.get("author"), url)
+            author = "Deszkavízió"
     cats = [t["name"] for grp in (emb.get("wp:term") or []) for t in grp
             if t.get("taxonomy") == "category" and t.get("name")]
-    image_url = None
-    media = emb.get("wp:featuredmedia") or []
-    if media:
-        m = media[0]
-        sizes = (m.get("media_details") or {}).get("sizes") or {}
-        image_url = (sizes.get("full") or sizes.get("large") or {}).get("source_url") or m.get("source_url")
+    image_url = _find_image(post, emb, url)
     return Article(title=title, url=url, author=author, rovat=pick_rovat(cats),
                    image_url=image_url, published_local_date=_parse_date(post["date"]).date(),
                    paragraphs=extract_paragraphs(post.get("content", {}).get("rendered", "")),
@@ -135,3 +134,44 @@ def extract_paragraphs(html: str, n: int = PARAGRAPHS_PER_ARTICLE) -> list[str]:
         if len(res) >= n:
             break
     return res
+
+
+def _get_json(url, params=None):
+    r = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
+    r.raise_for_status()
+    return json.loads(r.content.decode("utf-8-sig", errors="replace").strip())
+
+
+def _find_image(post: dict, emb: dict, url: str) -> str | None:
+    """Kiemelt kép: embed -> /media/<id> -> jetpack mező -> og:image -> első kép a szövegben."""
+    media = emb.get("wp:featuredmedia") or []
+    if media and isinstance(media[0], dict) and (media[0].get("source_url") or media[0].get("media_details")):
+        m = media[0]
+        sizes = (m.get("media_details") or {}).get("sizes") or {}
+        found = (sizes.get("full") or sizes.get("large") or {}).get("source_url") or m.get("source_url")
+        if found:
+            return found
+    mid = post.get("featured_media")
+    if mid:
+        try:
+            m = _get_json(f"{WP_API_POSTS_URL.rsplit('/', 1)[0]}/media/{mid}")
+            sizes = (m.get("media_details") or {}).get("sizes") or {}
+            found = (sizes.get("full") or sizes.get("large") or {}).get("source_url") or m.get("source_url")
+            if found:
+                return found
+        except Exception as e:  # noqa: BLE001
+            log.warning("Media lekérés sikertelen (%s): %s", mid, e)
+    if post.get("jetpack_featured_media_url"):
+        return post["jetpack_featured_media_url"]
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        og = BeautifulSoup(r.text, "html.parser").find("meta", property="og:image")
+        if og and og.get("content"):
+            return og["content"]
+    except Exception as e:  # noqa: BLE001
+        log.warning("Oldal lekérése sikertelen (%s): %s", url, e)
+    img = BeautifulSoup(post.get("content", {}).get("rendered", ""), "html.parser").find("img")
+    if img and (img.get("data-src") or img.get("src")):
+        return img.get("data-src") or img.get("src")
+    log.warning("Nincs kép: %s", url)
+    return None
