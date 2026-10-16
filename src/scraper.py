@@ -80,9 +80,13 @@ def fetch_articles_for_date(target_date: date, ignore_focus: bool = False,
             day_total += 1
             a = _article_from_post(post)
             if not a:
+                log.warning("Feldolgozhatatlan cikk: %s", post.get("link"))
                 continue
             seen_cats.update(a.categories)
-            if ignore_focus or any(norm(c) == norm(FOCUS_CATEGORY_NAME) for c in a.categories):
+            ok = ignore_focus or any(norm(c) == norm(FOCUS_CATEGORY_NAME) for c in a.categories)
+            log.info("%s | %s | %s | kategóriák: %s | %s", post["date"][11:16], "BENNE" if ok else "kihagyva",
+                     a.title[:60], ", ".join(a.categories), post.get("status", ""))
+            if ok:
                 out.append(a)
         if len(posts) < 50:
             break
