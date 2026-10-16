@@ -1,0 +1,60 @@
+name: Instagram posztok
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # 07:00 (nyár) / 06:00 (tél) budapesti idő
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Konkrét nap (YYYY-MM-DD), üresen = tegnap"
+        required: false
+        default: ""
+      ignore_focus:
+        description: "Teszt: a fókusz-kategóriát figyelmen kívül hagyja (minden cikk)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Urbanist betűtípus
+        run: python fonts/fetch_fonts.py || echo "::warning::Urbanist letöltés sikertelen, DejaVu a tartalék"
+      - name: Képek renderelése
+        working-directory: src
+        env:
+          DATE: ${{ github.event.inputs.date }}
+          IGNORE_FOCUS: ${{ github.event.inputs.ignore_focus }}
+          FOCUS_CATEGORY_NAME: ${{ vars.FOCUS_CATEGORY_NAME }}
+        run: |
+          ARGS=""
+          [ -n "$DATE" ] && ARGS="$ARGS --date $DATE"
+          [ "$IGNORE_FOCUS" = "true" ] && ARGS="$ARGS --ignore-focus"
+          python main.py render $ARGS
+      - name: Commit + push
+        run: |
+          git config user.name "deszka-instagram-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A images/latest
+          git diff --cached --quiet || git commit -m "Instagram képek frissítése"
+          git push || true
+          echo "IMAGES_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: E-mail küldése (Brevo)
+        working-directory: src
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          DIGEST_EMAIL_TO: ${{ secrets.DIGEST_EMAIL_TO }}
+          DIGEST_EMAIL_FROM: ${{ secrets.DIGEST_EMAIL_FROM }}
+        run: python main.py send
