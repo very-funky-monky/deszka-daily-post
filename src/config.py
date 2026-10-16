@@ -68,3 +68,9 @@ GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
 GITHUB_BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 IMAGES_COMMIT = os.environ.get("IMAGES_COMMIT", "")
 IMAGES_REPO_DIR = "images/latest"
+
+# WordPress szerzőkód -> név (ha az API nem adja vissza a nevet)
+AUTHORS = {
+    3: "Malik Andrea", 9: "Flaisz János", 13: "Steindl Gabriella", 26: "Ráth Orsolya",
+    35: "Bánfi Benedek", 37: "Molnár Dóra", 38: "Szabó Száva Anna",
+}
