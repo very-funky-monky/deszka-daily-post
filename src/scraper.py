@@ -11,6 +11,7 @@ kategória - ezért a rovatot a kategórianevek közül külön keressük ki.
 
 from __future__ import annotations
 
+import json
 import logging
 import re
 import unicodedata
@@ -91,7 +92,9 @@ def fetch_articles_for_date(target_date: date, ignore_focus: bool = False, max_p
         if resp.status_code == 400:  # elfogytak az oldalak
             break
         resp.raise_for_status()
-        posts = resp.json()
+        # a WordPress válasza elejére valami (a téma/bővítmény egyik PHP fájlja) UTF-8 BOM-ot
+        # tesz, amitől a resp.json() elbukik -> utf-8-sig-gel dekódoljuk
+        posts = json.loads(resp.content.decode("utf-8-sig"))
         if not posts:
             break
 
