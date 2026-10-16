@@ -1,6 +1,7 @@
 """Cikkek lekérése a WordPress REST API-n: csak a 'Főoldali fókusz cikk' kategóriások."""
 from __future__ import annotations
 
+import json
 import logging
 import re
 import unicodedata
@@ -70,7 +71,7 @@ def fetch_articles_for_date(target_date: date, ignore_focus: bool = False,
         if resp.status_code == 400:
             break
         resp.raise_for_status()
-        posts = resp.json()
+        posts = json.loads(resp.content.decode("utf-8-sig", errors="replace").strip())
         if not posts:
             break
         for post in posts:
