@@ -1,9 +1,10 @@
 """
-Központi beállítások: a Deszkavízió napi digest generátorhoz.
+Központi beállítások - Deszkavízió Instagram poszt generátor.
 
-A sablon mostantól EGYSÉGES: a fejléc, a panel-textúra és az üveg-címke
-felépítése minden rovatnál pontosan ugyanaz, kódból generálva - kategóriánként
-kizárólag az accent-szín változik. Ez van itt beállítva:
+Cikkenként 3 kép készül (1080x1350, Instagram 4:5):
+  1. borító: fotó + rovat-címke + szerző + cím
+  2. az első bekezdés idézetkártyán
+  3. a második bekezdés idézetkártyán
 """
 
 import os
@@ -14,94 +15,93 @@ import os
 SITE_BASE_URL = "https://deszkavizio.hu"
 WP_API_POSTS_URL = f"{SITE_BASE_URL}/wp-json/wp/v2/posts"
 
-CATEGORY_FILTER = None  # pl.: {"Színház", "Mozgókép", "Tánc"} - üresen = mind
+# Csak azokat a cikkeket dolgozzuk fel, amelyeknél ez a kategória be van
+# pipálva. (Kis/nagybetű és ékezet nem számít az egyezésnél.)
+FOCUS_CATEGORY_NAME = os.environ.get("FOCUS_CATEGORY_NAME") or "Főoldali fókusz cikk"
 
 # ---------------------------------------------------------------------------
-# Vászon és elrendezés (pixelben, 945x2048-as vászonra vonatkoztatva)
+# Vászon és elrendezés (pixel, 1080x1350) - a sablonképeidről mérve
 # ---------------------------------------------------------------------------
-CANVAS_SIZE = (945, 2048)
+CANVAS_SIZE = (1080, 1350)
 
-LAYOUT = {
-    "header_height": 558,
-    "photo_box": (0, 558, 945, 1092),
-    "panel_start_y": 1092,
-    "panel_bg_color": (10, 11, 11),
-
-    "tag_pill": {
-        "x0": 56,
-        "y0": 1187,          # panel_start_y-hoz képest kb. +95
-        "height": 70,
-        "padding_x": 34,
-        "font_size": 27,
-    },
-    "author": {
-        "x0": 60, "y0": 1300,
-        "font_size": 28,
-    },
+COVER = {
+    # a fotó helye a sablonon (x0, y0, x1, y1) - alatta a színes sáv a sablon része
+    "photo_box": (0, 181, 1080, 789),
+    # melyik magasságra igazítsa a vágást, ha a fotó magasabb a dobozánál
+    # (0 = felső szél, 0.5 = közép) - a portréknál a fej általában felül van
+    "photo_focus_y": 0.35,
+    "center_x": 540,
+    # a szöveg "nagybetű-tető" (cap height) vonala - a betűtípustól függetlenül
+    # ide igazodik, a test_1.jpg mintád alapján
+    "author": {"cap_top_y": 960, "font_size": 30},
     "title": {
-        "x0": 60, "y0": 1372,
-        "right_margin": 65,
-        "font_size": 46,
-        "line_spacing": 1.18,
-        "max_lines": 6,
+        "cap_top_y": 1024,
+        "max_width": 864,
+        "font_size": 62,
+        "min_font_size": 40,
+        "line_spacing": 1.21,
+        "max_lines": 4,
+        "bottom_limit": 1310,
     },
 }
 
+TEXT_CARD = {
+    # a szöveg doboza az idézetkereten belül (x0, y0, x1, y1); a bal felső és
+    # jobb alsó idézőjelet kikerüli
+    "box": (170, 290, 910, 1145),
+    "font_size": 54,
+    "min_font_size": 30,
+    "line_spacing": 1.38,
+    "align": "left",      # "left" vagy "center"
+    "valign": "middle",   # "top" vagy "middle"
+}
+
+TEXT_COLOR = (255, 255, 255)
+
 # ---------------------------------------------------------------------------
-# Betűtípus - Urbanist (a szerző dőlttel, a cím félkövérrel)
-#
-# A tényleges .ttf fájlok licenc-korlát miatt nincsenek idemellékelve -
-# ehelyett a fonts/fetch_fonts.py (vagy a GitHub Actions workflow) tölti le
-# hivatalos forrásból (Google Fonts / google/fonts repó) build-időben.
-# Ha ezek valamiért hiányoznának, a rendszer automatikusan a rendszerbe
-# épített DejaVu Sans-ra esik vissza, hogy sose álljon le hibával.
+# Bekezdés-kinyerés a cikkből
+# ---------------------------------------------------------------------------
+PARAGRAPHS_PER_ARTICLE = 2
+MIN_PARAGRAPH_CHARS = 40   # ennél rövidebb sort nem tekintünk bekezdésnek
+
+# ---------------------------------------------------------------------------
+# Betűtípus - Urbanist (a fonts/fetch_fonts.py tölti le), DejaVu a tartalék
 # ---------------------------------------------------------------------------
 FONT_DIR = os.path.join(os.path.dirname(__file__), "..", "fonts")
 
+
+def _fp(name):
+    return os.path.join(FONT_DIR, name)
+
+
+_SYS_DEJAVU = "/usr/share/fonts/truetype/dejavu/"
+
 FONT_CANDIDATES = {
-    "bold": [
-        os.path.join(FONT_DIR, "Urbanist-Bold.ttf"),
-        os.path.join(FONT_DIR, "DejaVuSans-Bold.ttf"),
-    ],
-    "italic": [
-        os.path.join(FONT_DIR, "Urbanist-Italic.ttf"),
-        os.path.join(FONT_DIR, "DejaVuSans-Oblique.ttf"),
-    ],
-    "regular": [
-        os.path.join(FONT_DIR, "Urbanist-Regular.ttf"),
-        os.path.join(FONT_DIR, "DejaVuSans.ttf"),
-    ],
+    "bold": [_fp("Urbanist-Bold.ttf"), _fp("DejaVuSans-Bold.ttf"), _SYS_DEJAVU + "DejaVuSans-Bold.ttf"],
+    "italic": [_fp("Urbanist-Italic.ttf"), _fp("DejaVuSans-Oblique.ttf"), _SYS_DEJAVU + "DejaVuSans-Oblique.ttf"],
+    # a bekezdésekhez Medium vastagság: sötét háttéren olvashatóbb a Regularnál
+    "body": [_fp("Urbanist-Medium.ttf"), _fp("Urbanist-Regular.ttf"), _fp("DejaVuSans.ttf"), _SYS_DEJAVU + "DejaVuSans.ttf"],
 }
 
-
+# ---------------------------------------------------------------------------
+# Sablonok rovatonként: (borító, szöveges kártya)
+# ---------------------------------------------------------------------------
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), "..", "templates")
 
-# ---------------------------------------------------------------------------
-# A sablon mostantól a Te 7 saját (JPEG) képed - változtatás nélkül.
-# Minden kategóriához a hozzá tartozó fájl tartozik; a fotó-doboz és a
-# cím/szerző szöveg kerül csak rá futásidőben, minden más (fejléc, logó,
-# panel-textúra, "liquid glass" rovat-címke) pontosan az marad, ami a
-# képen van.
-# ---------------------------------------------------------------------------
-DEFAULT_TEMPLATE_KEY = "Színház"
-
-CATEGORY_TEMPLATE_FILES = {
-    "Színház": os.path.join(TEMPLATE_DIR, "template_szinhaz.jpg"),
-    "Mozgókép": os.path.join(TEMPLATE_DIR, "template_mozgokep.jpg"),
-    "Tánc": os.path.join(TEMPLATE_DIR, "template_tanc.jpg"),
-    "Opera": os.path.join(TEMPLATE_DIR, "template_opera.jpg"),
-    "Zene": os.path.join(TEMPLATE_DIR, "template_zene.jpg"),
-    "Képzőművészet": os.path.join(TEMPLATE_DIR, "template_kepzomuveszet.jpg"),
-    "Könyv": os.path.join(TEMPLATE_DIR, "template_konyv.jpg"),
+ROVAT_TEMPLATES = {
+    "Színház": ("cover_szinhaz.jpg", "text_szinhaz.jpg"),
+    "Mozgókép": ("cover_mozgokep.jpg", "text_mozgokep.jpg"),
+    "Tánc": ("cover_tanc.jpg", "text_tanc.jpg"),
+    "Opera": ("cover_opera.jpg", "text_opera.jpg"),
+    "Zene": ("cover_zene.jpg", "text_zene.jpg"),
+    "Képzőművészet": ("cover_kepzomuveszet.jpg", "text_kepzomuveszet.jpg"),
+    "Könyv": ("cover_konyv.jpg", "text_konyv.jpg"),
 }
+# Ha egy cikknek egyik rovat-kategóriája sincs (pl. csak "Hírek"), ezt kapja:
+DEFAULT_ROVAT = "Színház"
 
-# ---------------------------------------------------------------------------
-# Rovatszínek - a sablonképek logójából mérve. Ez adja a cím/szerző
-# szövegszínét (a sablon képi része - fejléc, panel, címke - változatlan).
-# ---------------------------------------------------------------------------
-DEFAULT_ACCENT = (41, 234, 215)
-
-ACCENT_COLORS = {
+# Az e-mailben a rovat-címke színe (a sablonok logószínéből mérve)
+ROVAT_COLORS = {
     "Színház": (27, 245, 210),
     "Mozgókép": (28, 246, 212),
     "Tánc": (255, 48, 255),
@@ -112,30 +112,23 @@ ACCENT_COLORS = {
 }
 
 # ---------------------------------------------------------------------------
-# E-mail (Brevo - lásd emailer.py a választás indoklásáért)
-#
-# DIGEST_EMAIL_TO: egy vagy több cím, vesszővel elválasztva
-# (pl. "en@example.com, baratom@example.com, masik@example.com")
+# E-mail (Brevo) - DIGEST_EMAIL_TO: vesszővel elválasztott címek
 # ---------------------------------------------------------------------------
 EMAIL_TO_LIST = [e.strip() for e in os.environ.get("DIGEST_EMAIL_TO", "").split(",") if e.strip()]
 EMAIL_FROM = os.environ.get("DIGEST_EMAIL_FROM", "")
-EMAIL_FROM_NAME = os.environ.get("DIGEST_EMAIL_FROM_NAME", "Deszkavízió digest")
+EMAIL_FROM_NAME = os.environ.get("DIGEST_EMAIL_FROM_NAME") or "Deszkavízió Instagram"
 BREVO_API_KEY = os.environ.get("BREVO_API_KEY", "")
-EMAIL_SUBJECT_PREFIX = "Deszkavízió napi összefoglaló"
+EMAIL_SUBJECT_PREFIX = "Instagram posztok"
 
-# Ha nincs cikk az adott napra, küldjön-e egy rövid "nincs cikk" e-mailt,
-# vagy inkább maradjon csendben.
+# Ha nem volt fókusz cikk, küldjön-e rövid "nincs" levelet, vagy maradjon csendben.
 SEND_EMPTY_DIGEST_NOTICE = True
 
 # ---------------------------------------------------------------------------
-# Kép-hosztolás a GitHub repóból (mert a Brevo API nem támogat valódi
-# beágyazott/cid képet, csak nyilvánosan elérhető URL-t - lásd emailer.py).
-#
-# A workflow a generált képeket a repóba commitolja, majd raw.githubusercontent.com
-# linkeken hivatkozunk rájuk az e-mailben. GITHUB_REPOSITORY és GITHUB_REF_NAME
-# a GitHub Actions által automatikusan beállított env változók - helyi
-# teszteléshez kézzel is megadhatók.
+# Kép-hosztolás a GitHub repóból (a Brevo nem tud beágyazott cid-es képet).
+# A linkek a commit azonosítójára (SHA) mutatnak, ezért a régi levelekben is
+# az eredeti képek maradnak látszódni.
 # ---------------------------------------------------------------------------
-GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")  # "felhasznalo/repo-nev"
+GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")
 GITHUB_BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
-IMAGES_REPO_DIR = "images/latest"  # a repóhoz képest relatív útvonal
+IMAGES_COMMIT = os.environ.get("IMAGES_COMMIT", "")
+IMAGES_REPO_DIR = "images/latest"
