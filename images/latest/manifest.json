@@ -1,0 +1,65 @@
+{
+  "target_date": "2026. 10. 15.",
+  "items": [
+    {
+      "title": "A boldog békeidőkben nyomoznak Zajácz D. Zoltán új krimijében",
+      "author": "Deszkavízió",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-boldog-bekeidokben-nyomoznak-zajacz-d-zoltan-uj-krimijeben/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "0_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "0_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "0_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Öt dokumentumfilm és két animációs alkotás gyártását támogatja a Nemzeti Filmintézet.",
+      "author": "Deszkavízió",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/ot-dokumentumfilm-es-ket-animacios-alkotas-gyartasat-tamogatja-a-nemzeti-filmintezet/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "1_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "1_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "1_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Lengyel Ferenc 65 éves",
+      "author": "Deszkavízió",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/lengyel-ferenc-65-eves/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "2_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "2_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "2_p2.jpg"
+        }
+      ]
+    }
+  ]
+}
