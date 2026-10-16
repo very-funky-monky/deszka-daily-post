@@ -1,47 +1,4 @@
 {
   "target_date": "2026. 10. 15.",
-  "items": [
-    {
-      "filename": "0.jpg",
-      "title": "A boldog békeidőkben nyomoznak Zajácz D. Zoltán új krimijében",
-      "author": "Deszkavízió",
-      "category": "Ajánlók",
-      "url": "https://deszkavizio.hu/a-boldog-bekeidokben-nyomoznak-zajacz-d-zoltan-uj-krimijeben/"
-    },
-    {
-      "filename": "1.jpg",
-      "title": "Öt dokumentumfilm és két animációs alkotás gyártását támogatja a Nemzeti Filmintézet.",
-      "author": "Deszkavízió",
-      "category": "Főoldali fókusz cikk",
-      "url": "https://deszkavizio.hu/ot-dokumentumfilm-es-ket-animacios-alkotas-gyartasat-tamogatja-a-nemzeti-filmintezet/"
-    },
-    {
-      "filename": "2.jpg",
-      "title": "Gyerekszereplőket keres a Szegedi Nemzeti Színház",
-      "author": "Deszkavízió",
-      "category": "Hírek",
-      "url": "https://deszkavizio.hu/gyerekszereploket-keres-a-szegedi-nemzeti-szinhaz/"
-    },
-    {
-      "filename": "3.jpg",
-      "title": "Stratégiai partnerségre lép a Telekom és a Katona József Színház",
-      "author": "Deszkavízió",
-      "category": "Hírek",
-      "url": "https://deszkavizio.hu/strategiai-partnersegre-lep-a-telekom-es-a-katona-jozsef-szinhaz/"
-    },
-    {
-      "filename": "4.jpg",
-      "title": "Őszi Szalon címmel várja az érdeklődőket a Bajor Gizi Színészmúzeum",
-      "author": "Deszkavízió",
-      "category": "Hírek",
-      "url": "https://deszkavizio.hu/oszi-szalon-cimmel-varja-az-erdeklodoket-a-bajor-gizi-szineszmuzeum/"
-    },
-    {
-      "filename": "5.jpg",
-      "title": "Lengyel Ferenc 65 éves",
-      "author": "Deszkavízió",
-      "category": "Főoldali fókusz cikk",
-      "url": "https://deszkavizio.hu/lengyel-ferenc-65-eves/"
-    }
-  ]
+  "items": []
 }
