@@ -99,6 +99,8 @@ def render_cover(article: Article) -> Image.Image:
     img = _template("cover", article.rovat)
     x0, y0, x1, y1 = COVER["photo_box"]
     photo = _download_image(article.image_url)
+    if photo is None:
+        log.warning("Borítókép nélkül készül a borító: %s (kép: %s)", article.title, article.image_url)
     if photo is not None:
         img.paste(ImageOps.fit(photo, (x1 - x0, y1 - y0), Image.LANCZOS,
                                centering=(0.5, COVER["photo_focus_y"])), (x0, y0))
