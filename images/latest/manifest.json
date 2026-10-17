@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 15.",
+  "target_date": "2026. 10. 16.",
   "items": [
     {
-      "title": "A boldog békeidőkben nyomoznak Zajácz D. Zoltán új krimijében",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-boldog-bekeidokben-nyomoznak-zajacz-d-zoltan-uj-krimijeben/",
+      "title": "„A fotózás nekem egy kicsit olyan, mint egy drog” – Interjú Schram Andrással",
+      "author": "Steindl Gabriella",
+      "rovat": "Képzőművészet",
+      "url": "https://deszkavizio.hu/a-fotozas-nekem-egy-kicsit-olyan-mint-egy-drog-interju-schram-andrassal/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Öt dokumentumfilm és két animációs alkotás gyártását támogatja a Nemzeti Filmintézet.",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/ot-dokumentumfilm-es-ket-animacios-alkotas-gyartasat-tamogatja-a-nemzeti-filmintezet/",
+      "title": "Novemberben Drakula kísért a Vajdahunyadvárban",
+      "author": "Bánfi Benedek",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/novemberben-drakula-kisert-a-vajdahunyadvarban/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Lengyel Ferenc 65 éves",
+      "title": "Magyarországi premierre készül a Veres 1 Színház",
       "author": "Flaisz János",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/lengyel-ferenc-65-eves/",
+      "url": "https://deszkavizio.hu/magyarorszagi-premierre-keszul-a-veres-1-szinhaz/",
       "images": [
         {
           "kind": "cover",
@@ -58,6 +58,46 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Fehér Renátó nyerte idén a Margó-díjat",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/feher-renato-nyerte-iden-a-margo-dijat/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "3_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "3_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "3_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Grisnik Petra 40 éves",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/grisnik-petra-40-eves/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "4_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "4_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "4_p2.jpg"
         }
       ]
     }
