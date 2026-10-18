@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 16.",
+  "target_date": "2026. 10. 17.",
   "items": [
     {
-      "title": "„A fotózás nekem egy kicsit olyan, mint egy drog” – Interjú Schram Andrással",
-      "author": "Steindl Gabriella",
-      "rovat": "Képzőművészet",
-      "url": "https://deszkavizio.hu/a-fotozas-nekem-egy-kicsit-olyan-mint-egy-drog-interju-schram-andrassal/",
+      "title": "Molière, a színpad forradalmára – Kritikánk a francia musicalről",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/moliere-a-szinpad-forradalmara-kritika-a-latvanyos-francia-musicalrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Novemberben Drakula kísért a Vajdahunyadvárban",
+      "title": "A STRAND beköltözik az MVM Dome-ba szilveszterezni",
       "author": "Bánfi Benedek",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/novemberben-drakula-kisert-a-vajdahunyadvarban/",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/a-strand-bekoltozik-az-mvm-dome-ba-szilveszterezni/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Magyarországi premierre készül a Veres 1 Színház",
+      "title": "40 éves a kecskeméti Ciróka Bábszínház",
       "author": "Flaisz János",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/magyarorszagi-premierre-keszul-a-veres-1-szinhaz/",
+      "url": "https://deszkavizio.hu/40-eves-a-kecskemeti-ciroka-babszinhaz/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Fehér Renátó nyerte idén a Margó-díjat",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/feher-renato-nyerte-iden-a-margo-dijat/",
+      "title": "Hétvégi Filmklub: Dylan Southern, Will Lovelace – Oasis: Don’t Look Back in Anger",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/hetvegi-filmklub-dylan-southern-will-lovelace-oasis-dont-look-back-in-anger/",
       "images": [
         {
           "kind": "cover",
@@ -82,10 +82,10 @@
       ]
     },
     {
-      "title": "Grisnik Petra 40 éves",
+      "title": "A Margón mutatják be Karafiáth Orsolya új verseskötetét",
       "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/grisnik-petra-40-eves/",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-margon-mutatjak-be-karafiath-orsolya-uj-verseskotetet/",
       "images": [
         {
           "kind": "cover",
