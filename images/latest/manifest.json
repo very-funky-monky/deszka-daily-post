@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 18.",
+  "target_date": "2026. 10. 19.",
   "items": [
     {
-      "title": "“Jól esik a színház részéről a bizalom, amit már évek óta megkapok” – Interjú Gáspár Sándorral",
-      "author": "Flaisz János",
+      "title": "Megvan hát e rideg világnak is költészete! – Az ember tragédiája a Budapest Bábszínházban",
+      "author": "Bánfi Benedek",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/jol-esik-a-szinhaz-reszerol-a-bizalom-amit-mar-evek-ota-megkapok-interju-gaspar-sandorral/",
+      "url": "https://deszkavizio.hu/megvan-hat-e-rideg-vilagnak-is-kolteszete-az-ember-tragediaja-a-budapest-babszinhazban/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Woody Allen-világpremier a Centrál Színházban",
-      "author": "Molnár Dóra",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/woody-allen-vilagpremier-a-central-szinhazban/",
+      "title": "Lábas Viki, FILO és Agócs Marci is színpadra lép három jó ügy érdekében",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/labas-viki-filo-es-agocs-marci-is-szinpadra-lep-harom-jo-ugy-erdekeben/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Ismét megrendezésre kerül a Lampion Mesefesztivál",
+      "title": "Litkai Gergely 50 éves",
       "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/ismet-megrendezesre-kerul-a-lampion-mesefesztival/",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/litkai-gergely-50-eves/",
       "images": [
         {
           "kind": "cover",
@@ -58,26 +58,6 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Pink Floyd-show a Sportarénában, de Pink Floyd tagok nélkül",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/pink-floyd-show-a-sportarenaban-de-pink-floyd-tagok-nelkul/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "3_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "3_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "3_p2.jpg"
         }
       ]
     }
