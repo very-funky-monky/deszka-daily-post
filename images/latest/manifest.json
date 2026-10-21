@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 19.",
+  "target_date": "2026. 10. 20.",
   "items": [
     {
-      "title": "Megvan hát e rideg világnak is költészete! – Az ember tragédiája a Budapest Bábszínházban",
-      "author": "Bánfi Benedek",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/megvan-hat-e-rideg-vilagnak-is-kolteszete-az-ember-tragediaja-a-budapest-babszinhazban/",
+      "title": "Mindig a férj a tettes? – Elolvastuk Alice Feeney új pszichothrillerét",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/mindig-a-ferj-a-tettes-elolvastuk-alice-feeney-uj-pszichothrilleret/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Lábas Viki, FILO és Agócs Marci is színpadra lép három jó ügy érdekében",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/labas-viki-filo-es-agocs-marci-is-szinpadra-lep-harom-jo-ugy-erdekeben/",
+      "title": "A Radnótiban mutatják be az Open Books új könyvsorozatát",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-radnotiban-mutatjak-be-az-open-books-uj-konyvsorozatat/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Litkai Gergely 50 éves",
-      "author": "Flaisz János",
+      "title": "Analog barátok – megérkezett A MI barátságunk ifjúsági előadás a Tháliába",
+      "author": "Bánfi Benedek",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/litkai-gergely-50-eves/",
+      "url": "https://deszkavizio.hu/analog-baratok-megerkezett-a-mi-baratsagunk-ifjusagi-eloadas-a-thaliaba/",
       "images": [
         {
           "kind": "cover",
@@ -58,6 +58,26 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Udvaros Dorottya kelti életre Karikó Katalin történetét",
+      "author": "Molnár Dóra",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/udvaros-dorottya-kelti-eletre-kariko-katalin-tortenetet/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "3_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "3_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "3_p2.jpg"
         }
       ]
     }
