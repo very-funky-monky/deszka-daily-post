@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 21.",
+  "target_date": "2026. 10. 22.",
   "items": [
     {
-      "title": "A hét könyve – Piergiorgio Pulixi: A Fekete Macskák Könyvesboltja",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-het-konyve-piergiorgio-pulixi-a-fekete-macskak-konyvesboltja/",
+      "title": "“Csak akkor érdemes egy előadást csinálni, ha van mögötte egy ügy” – Interjú Kiss-Végh Emőkével",
+      "author": "Deszkavízió",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/csak-akkor-erdemes-egy-eloadast-csinalni-ha-van-mogotte-egy-ugy-interju-kiss-vegh-emokevel/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Tolnai Ottó-kötettel gazdagodhat a diákok házi könyvtára",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/tolnai-otto-kotettel-gazdagodhat-a-diakok-hazi-konyvtara/",
+      "title": "A Duna gyöngye sokaknak nem elég értékes – Isolation Budapest az Akváriumban",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/a-duna-gyongye-sokaknak-nem-eleg-ertekes-isolation-budapest-az-akvariumban/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Van élet a romantika után? – itt a Fontaines D.C. Dopamine Chamberje",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/van-elet-a-romantika-utan-itt-a-fontaines-d-c-dopamine-chamberje/",
+      "title": "Münchenben is bemutatkozott az Operettszínház A Notre Dame-i toronyőr musicalje",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/munchenben-is-bemutatkozott-az-operettszinhaz-a-notre-dame-i-toronyor-musicalje/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Nádas Péter Találkozás című drámáját mutatják be Szegeden",
+      "title": "Nádas Péter-emlékkiállítás nyílt a Petőfi Irodalmi Múzeumban",
       "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/nadas-peter-talalkozas-cimu-dramajat-mutatjak-be-szegeden/",
+      "rovat": "Képzőművészet",
+      "url": "https://deszkavizio.hu/nadas-peter-emlekkiallitas-nyilt-a-petofi-irodalmi-muzeumban/",
       "images": [
         {
           "kind": "cover",
