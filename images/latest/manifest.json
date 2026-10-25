@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 23.",
+  "target_date": "2026. 10. 24.",
   "items": [
     {
-      "title": "„A művészetre nevelés a missziónk” – Interjú Bada Évával, a KÉPEZŐ Galéria vezetőjével",
-      "author": "Steindl Gabriella",
-      "rovat": "Képzőművészet",
-      "url": "https://deszkavizio.hu/a-muveszetre-neveles-a-misszionk-interju-bada-evaval-a-kepezo-galeria-vezetojevel/",
+      "title": "Harry Hole visszatért, de már nem a régi",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/harry-hole-visszatert-de-mar-nem-a-regi/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Az analóg kultúrafogyasztásra hívja fel a figyelmet az analóg+ kulturális projekt",
-      "author": "Bánfi Benedek",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/az-analog-kulturafogyasztasra-hivja-fel-a-figyelmet-az-analog-kulturalis-projekt/",
+      "title": "Először lesz látható az Operaházban A bahcsiszeráji szökőkút",
+      "author": "Flaisz János",
+      "rovat": "Tánc",
+      "url": "https://deszkavizio.hu/eloszor-lesz-lathato-az-operahazban-a-bahcsiszeraji-szokokut/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Egy ősz, amely megváltoztatta a történelmet – Fábián Janka új kisregényéről",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/egy-osz-amely-megvaltoztatta-a-tortenelmet-fabian-janka-uj-kisregenyerol/",
+      "title": "5+1 film, amire érdemes lesz odafigyelni az idei BIFF-en",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/51-film-amire-erdemes-lesz-odafigyelni-az-idei-biff-en/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Mátray László 50 éves",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/matray-laszlo-50-eves/",
+      "title": "Orosz István 75 éves",
+      "author": "Bánfi Benedek",
+      "rovat": "Képzőművészet",
+      "url": "https://deszkavizio.hu/orosz-istvan-75-eves/",
       "images": [
         {
           "kind": "cover",
