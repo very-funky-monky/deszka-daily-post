@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 25.",
+  "target_date": "2026. 10. 26.",
   "items": [
     {
-      "title": "“A bizalom csak munkával épülhet ki” – Interjú Dolhai Attilával",
-      "author": "Flaisz János",
+      "title": "Forradalmi Rómeó és Júlia – Kritika az 56 csepp vér című musicalről",
+      "author": "Ráth Orsolya",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/a-bizalom-csak-munkaval-epulhet-ki-interju-dolhai-attilaval/",
+      "url": "https://deszkavizio.hu/forradalmi-romeo-es-julia-kritika-az-56-csepp-ver-cimu-musicalrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Monumentális előadás született Thomas Mann regényéből",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/monumentalis-eloadas-szuletett-thomas-mann-regenyebol/",
+      "title": "Két magyar film debütál a Tallini Filmfesztiválon",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/ket-magyar-film-debutal-a-tallini-filmfesztivalon/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "A családi viszályoktól a háború árnyékáig",
+      "title": "Jótékonysági árverésre bocsátják a Vígszínház művészeinek alkotásait",
       "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-csaladi-viszalyoktol-a-haboru-arnyekaig/",
+      "rovat": "Képzőművészet",
+      "url": "https://deszkavizio.hu/jotekonysagi-arveresre-bocsatjak-a-vigszinhaz-muveszeinek-alkotasait/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "A rock & roll és a jóga is megfér egymás mellett Varga Livius könyvében",
-      "author": "Bánfi Benedek",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-rock-roll-es-a-joga-is-megfer-egymas-mellett-varga-livius-konyveben/",
+      "title": "Szakonyi Károly 95 éves",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/szakonyi-karoly-95-eves/",
       "images": [
         {
           "kind": "cover",
