@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 28.",
+  "target_date": "2026. 10. 29.",
   "items": [
     {
-      "title": "A hét könyve – James Islington: A kevesek ereje",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-het-konyve-james-islington-a-kevesek-ereje/",
+      "title": "Hol vannak a feltörekvő zenészek a Nyugat legkeletibb, a Kelet legnyugatibb országában?",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/hol-vannak-a-feltorekvo-zeneszek-a-nyugat-legkeletibb-a-kelet-legnyugatibb-orszagaban/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Negyedik alkalommal rendezik meg Óbudán a Zsidó Kulturális Napokat",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/negyedik-alkalommal-rendezik-meg-obudan-a-zsido-kulturalis-napokat/",
+      "title": "Bud Spencer előtt is tiszteleg az idei Olasz Filmfesztivál",
+      "author": "Steindl Gabriella",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/bud-spencer-elott-is-tiszteleg-az-idei-olasz-filmfesztival/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "POPZAJLÁS Spotlight: Szabikeyz – MEGHALNI A SZÍNPADON",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/popzajlas-spotlight-szabikeyz-meghalni-a-szinpadon/",
+      "title": "Lunel kontra Maurepas, avagy miként zajlik egy válás francia módra",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/lunel-kontra-maurepas-avagy-mikent-zajlik-egy-valas-francia-modra/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Csikos Sándor 85 éves",
+      "title": "Joe Hill szerint a sárkányok olyanok, mint a macskák – Beszámoló a Kín Király könyvbemutatójáról",
       "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/csikos-sandor-85-eves/",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/joe-hill-szerint-a-sarkanyok-olyanok-mint-a-macskak-beszamolo-a-kin-kiraly-konyvbemutatojarol/",
       "images": [
         {
           "kind": "cover",
@@ -78,6 +78,26 @@
         {
           "kind": "p2",
           "filename": "3_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Az amerikai indie-pop duó, a Sports az A38-on is fellép",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/az-amerikai-indie-pop-duo-a-sports-az-a38-on-is-fellep/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "4_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "4_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "4_p2.jpg"
         }
       ]
     }
