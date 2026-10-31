@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 29.",
+  "target_date": "2026. 10. 30.",
   "items": [
     {
-      "title": "Hol vannak a feltörekvő zenészek a Nyugat legkeletibb, a Kelet legnyugatibb országában?",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/hol-vannak-a-feltorekvo-zeneszek-a-nyugat-legkeletibb-a-kelet-legnyugatibb-orszagaban/",
+      "title": "Vámpírok lakják a vidéket? – Elolvastuk Mészáros Dorka új krimijét",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/vampirok-lakjak-a-videket-elolvastuk-meszaros-dorka-uj-krimijet/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Bud Spencer előtt is tiszteleg az idei Olasz Filmfesztivál",
-      "author": "Steindl Gabriella",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/bud-spencer-elott-is-tiszteleg-az-idei-olasz-filmfesztival/",
+      "title": "Ma este debütál a Pécsi Balett legújabb bemutatója a Müpában",
+      "author": "Malik Andrea",
+      "rovat": "Tánc",
+      "url": "https://deszkavizio.hu/ma-este-debutal-a-pecsi-balett-legujabb-bemutatoja-a-mupaban/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Lunel kontra Maurepas, avagy miként zajlik egy válás francia módra",
+      "title": "Andreas Schager lesz a Sztárestek zongorával következő vendége",
       "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/lunel-kontra-maurepas-avagy-mikent-zajlik-egy-valas-francia-modra/",
+      "rovat": "Opera",
+      "url": "https://deszkavizio.hu/andreas-schager-lesz-a-sztarestek-zongoraval-kovetkezo-vendege/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Joe Hill szerint a sárkányok olyanok, mint a macskák – Beszámoló a Kín Király könyvbemutatójáról",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/joe-hill-szerint-a-sarkanyok-olyanok-mint-a-macskak-beszamolo-a-kin-kiraly-konyvbemutatojarol/",
+      "title": "A Palo Canto képviseli Magyarországot a hollandiai ESNS showcase-en",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/a-palo-canto-kepviseli-magyarorszagot-a-hollandiai-esns-showcase-en/",
       "images": [
         {
           "kind": "cover",
@@ -78,26 +78,6 @@
         {
           "kind": "p2",
           "filename": "3_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Az amerikai indie-pop duó, a Sports az A38-on is fellép",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/az-amerikai-indie-pop-duo-a-sports-az-a38-on-is-fellep/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "4_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "4_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "4_p2.jpg"
         }
       ]
     }
