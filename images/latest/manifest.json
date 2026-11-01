@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 10. 30.",
+  "target_date": "2026. 10. 31.",
   "items": [
     {
-      "title": "Vámpírok lakják a vidéket? – Elolvastuk Mészáros Dorka új krimijét",
+      "title": "Új fejezet nyílt a Q-ügyosztály történetében – Elolvastuk a Holt lelkeket",
       "author": "Flaisz János",
       "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/vampirok-lakjak-a-videket-elolvastuk-meszaros-dorka-uj-krimijet/",
+      "url": "https://deszkavizio.hu/uj-fejezet-nyilt-a-q-ugyosztaly-torteneteben-elolvastuk-a-holt-lelkeket/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Ma este debütál a Pécsi Balett legújabb bemutatója a Müpában",
-      "author": "Malik Andrea",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/ma-este-debutal-a-pecsi-balett-legujabb-bemutatoja-a-mupaban/",
+      "title": "Új rendezésben érkezik a Csókos asszony az Operettszínházba",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/uj-rendezesben-erkezik-a-csokos-asszony-az-operettszinhazba/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Andreas Schager lesz a Sztárestek zongorával következő vendége",
-      "author": "Flaisz János",
-      "rovat": "Opera",
-      "url": "https://deszkavizio.hu/andreas-schager-lesz-a-sztarestek-zongoraval-kovetkezo-vendege/",
+      "title": "Hétvégi Filmklub: Eleanor Wilson és Alex Huston Fischer – A vesszőből font férj (2026)",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/hetvegi-filmklub-eleanor-wilson-es-alex-huston-fischer-a-vesszobol-font-ferj-2026/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "A Palo Canto képviseli Magyarországot a hollandiai ESNS showcase-en",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/a-palo-canto-kepviseli-magyarorszagot-a-hollandiai-esns-showcase-en/",
+      "title": "30 éves jubileumát ünnepli a Lúdas Matyi a Madách Színházban",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/30-eves-jubileumat-unnepli-a-ludas-matyi-a-madach-szinhazban/",
       "images": [
         {
           "kind": "cover",
