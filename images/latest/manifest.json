@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 01.",
+  "target_date": "2026. 11. 02.",
   "items": [
     {
-      "title": "A hónap legjobbja – október",
-      "author": "Deszkavízió",
+      "title": "Szoba kilátástalansággal – kritika a Bányavirág című előadásról",
+      "author": "Ráth Orsolya",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/a-honap-legjobbja-oktober-8/",
+      "url": "https://deszkavizio.hu/szoba-kilatastalansaggal-kritika-a-banyavirag-cimu-eloadasrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Magyarországra látogat Gisèle Pelicot, a Radnótiban mutatja be kötetét",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/magyarorszagra-latogat-gisele-pelicot-a-radnotiban-mutatja-be-kotetet/",
+      "title": "A koreai előadóművészet sokszínűsége Budapesten",
+      "author": "Szabó Száva Anna",
+      "rovat": "Tánc",
+      "url": "https://deszkavizio.hu/a-koreai-eloadomuveszet-sokszinusege-budapesten/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Élet a tengeren – Tíz év után ismét megjelent Cserháti Éva első regénye",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/elet-a-tengeren-tiz-ev-utan-ismet-megjelent-cserhati-eva-elso-regenye/",
+      "title": "Véget ért a III. Budapest International Film Festival",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/veget-ert-a-iii-budapest-international-film-festival/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Andrea Bocelli jövő májusban újra Budapestre érkezik",
+      "title": "Sztarenki Dóra 35 éves",
       "author": "Flaisz János",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/andrea-bocelli-jovo-majusban-ujra-budapestre-erkezik/",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/sztarenki-dora-35-eves/",
       "images": [
         {
           "kind": "cover",
