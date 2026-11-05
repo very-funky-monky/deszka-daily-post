@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 03.",
+  "target_date": "2026. 11. 04.",
   "items": [
     {
-      "title": "„Ha leszakadunk a szeretetről, eltorzul a világunk” – interjú Rideg Zsófiával",
-      "author": "Deszkavízió",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/ha-leszakadunk-a-szeretetrol-eltorzul-a-vilagunk-interju-rideg-zsofiaval/",
+      "title": "A hét könyve – R. F. Kuang: Tajpeji történet",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-het-konyve-r-f-kuang-tajpeji-tortenet/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Klubesttel ünnepli 75. jubileumát a Magyar Állami Népi Együttes",
+      "title": "A legjobb rockzenekart Prágáig kergette a Barba Negra – Fontaines D.C. Prágában",
       "author": "Bánfi Benedek",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/klubesttel-unnepli-75-jubileumat-a-magyar-allami-nepi-egyuttes/",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/a-legjobb-rockzenekart-pragaig-kergette-a-barba-negra-fontaines-d-c-pragaban/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "A vadnyugat árvái – Billy, a Kölyök legendája",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-vadnyugat-arvai-billy-a-kolyok-legendaja/",
+      "title": "Elindult a Galeri új sorozata, a KVINT",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/elindult-a-galeri-uj-sorozata-a-kvint/",
       "images": [
         {
           "kind": "cover",
@@ -58,26 +58,6 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Újabb két különleges bemutatóra készül a Thália társulata",
-      "author": "Malik Andrea",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/ujabb-ket-kulonleges-bemutatora-keszul-a-thalia-tarsulata/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "3_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "3_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "3_p2.jpg"
         }
       ]
     }
