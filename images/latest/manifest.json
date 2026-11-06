@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 04.",
+  "target_date": "2026. 11. 05.",
   "items": [
     {
-      "title": "A hét könyve – R. F. Kuang: Tajpeji történet",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-het-konyve-r-f-kuang-tajpeji-tortenet/",
+      "title": "Minek is él, ha valaki hulla? – Kritika A miniszter félrelép előadásról",
+      "author": "Ráth Orsolya",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/minek-is-el-ha-valaki-hulla-kritika-a-miniszter-felrelep-eloadasrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "A legjobb rockzenekart Prágáig kergette a Barba Negra – Fontaines D.C. Prágában",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/a-legjobb-rockzenekart-pragaig-kergette-a-barba-negra-fontaines-d-c-pragaban/",
+      "title": "Feketehumor, Robert Pattinson és egy Jane Austen – ezek a legizgalmasabb novemberi mozipremierek",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/feketehumor-robert-pattinson-es-egy-jane-austen-ezek-a-legizgalmasabb-novemberi-mozipremierek/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Elindult a Galeri új sorozata, a KVINT",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/elindult-a-galeri-uj-sorozata-a-kvint/",
+      "title": "Gauguin irodalmi munkásságát is megismerhetjük a Szépművészeti Múzeum programján",
+      "author": "Molnár Dóra",
+      "rovat": "Képzőművészet",
+      "url": "https://deszkavizio.hu/gauguin-irodalmi-munkassagat-is-megismerhetjuk-a-szepmuveszeti-muzeum-programjan/",
       "images": [
         {
           "kind": "cover",
@@ -58,6 +58,26 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Újra mozivásznon látható a Tünet Együttes előadása, a Sóvirág",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/ujra-mozivasznon-lathato-a-tunet-egyuttes-eloadasa-a-sovirag/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "3_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "3_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "3_p2.jpg"
         }
       ]
     }
