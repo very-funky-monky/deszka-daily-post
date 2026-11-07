@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 05.",
+  "target_date": "2026. 11. 06.",
   "items": [
     {
-      "title": "Minek is él, ha valaki hulla? – Kritika A miniszter félrelép előadásról",
-      "author": "Ráth Orsolya",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/minek-is-el-ha-valaki-hulla-kritika-a-miniszter-felrelep-eloadasrol/",
+      "title": "Adóreformokról, a rádió szerepéről és a zeneipar jövőjéről is szó lesz a Music Hungary Konferencián",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/adoreformokrol-a-radio-szereperol-es-a-zeneipar-jovojerol-is-szo-lesz-a-music-hungary-konferencian/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Feketehumor, Robert Pattinson és egy Jane Austen – ezek a legizgalmasabb novemberi mozipremierek",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/feketehumor-robert-pattinson-es-egy-jane-austen-ezek-a-legizgalmasabb-novemberi-mozipremierek/",
+      "title": "A Fitos Dezső Társulat alkotói világát bemutató fotókiállítás nyílt a Fonóban",
+      "author": "Bánfi Benedek",
+      "rovat": "Tánc",
+      "url": "https://deszkavizio.hu/a-fitos-dezso-tarsulat-alkotoi-vilagat-bemutato-fotokiallitas-nyilt-a-fonoban/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Gauguin irodalmi munkásságát is megismerhetjük a Szépművészeti Múzeum programján",
-      "author": "Molnár Dóra",
-      "rovat": "Képzőművészet",
-      "url": "https://deszkavizio.hu/gauguin-irodalmi-munkassagat-is-megismerhetjuk-a-szepmuveszeti-muzeum-programjan/",
+      "title": "Kezdetét vette a miskolci Határtalan Napok fesztivál",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/kezdetet-vette-a-miskolci-hatartalan-napok-fesztival/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Újra mozivásznon látható a Tünet Együttes előadása, a Sóvirág",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/ujra-mozivasznon-lathato-a-tunet-egyuttes-eloadasa-a-sovirag/",
+      "title": "Egyetlen alkalommal lesz látható Tóth Krisztina műve a Spinozában",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/egyetlen-alkalommal-lesz-lathato-toth-krisztina-muve-a-spinozaban/",
       "images": [
         {
           "kind": "cover",
