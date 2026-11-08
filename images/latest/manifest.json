@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 06.",
+  "target_date": "2026. 11. 07.",
   "items": [
     {
-      "title": "Adóreformokról, a rádió szerepéről és a zeneipar jövőjéről is szó lesz a Music Hungary Konferencián",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/adoreformokrol-a-radio-szereperol-es-a-zeneipar-jovojerol-is-szo-lesz-a-music-hungary-konferencian/",
+      "title": "A Nyugati téri Libri kirakatába költözik Micimackó",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-nyugati-teri-libri-kirakataba-koltozik-micimacko/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "A Fitos Dezső Társulat alkotói világát bemutató fotókiállítás nyílt a Fonóban",
-      "author": "Bánfi Benedek",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/a-fitos-dezso-tarsulat-alkotoi-vilagat-bemutato-fotokiallitas-nyilt-a-fonoban/",
+      "title": "Szerek és szerepek – Kritika A webáruház című darabról",
+      "author": "Ráth Orsolya",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/szerek-es-szerepek-kritika-a-webaruhaz-cimu-darabrol/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Kezdetét vette a miskolci Határtalan Napok fesztivál",
+      "title": "Isten hozott Chrestomanci világában! – Újból megjelent Diana Wynne Jones klasszikussa",
       "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/kezdetet-vette-a-miskolci-hatartalan-napok-fesztival/",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/isten-hozott-chrestomanci-vilagaban-ujbol-megjelent-diana-wynne-jones-klasszikussa/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Egyetlen alkalommal lesz látható Tóth Krisztina műve a Spinozában",
+      "title": "Átadták a 2026-os Nők Lapja Irodalmi Díjakat",
       "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/egyetlen-alkalommal-lesz-lathato-toth-krisztina-muve-a-spinozaban/",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/atadtak-a-2026-os-nok-lapja-irodalmi-dijakat/",
       "images": [
         {
           "kind": "cover",
@@ -78,6 +78,26 @@
         {
           "kind": "p2",
           "filename": "3_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Hétvégi filmklub: Martin McDonagh – Vadló kilenc (2026)",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/hetvegi-filmklub-martin-mcdonagh-vadlo-kilenc-2026/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "4_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "4_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "4_p2.jpg"
         }
       ]
     }
