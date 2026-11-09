@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 07.",
+  "target_date": "2026. 11. 08.",
   "items": [
     {
-      "title": "A Nyugati téri Libri kirakatába költözik Micimackó",
+      "title": "Hogyan lopja, majd veszíti el a karácsonyt a Grincs?",
       "author": "Flaisz János",
       "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-nyugati-teri-libri-kirakataba-koltozik-micimacko/",
+      "url": "https://deszkavizio.hu/hogyan-lopja-majd-vesziti-el-a-karacsonyt-a-grincs/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Szerek és szerepek – Kritika A webáruház című darabról",
-      "author": "Ráth Orsolya",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/szerek-es-szerepek-kritika-a-webaruhaz-cimu-darabrol/",
+      "title": "Megérkeztek a Művészetek Völgye 2027 első fellépői",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/megerkeztek-a-muveszetek-volgye-2027-elso-fellepoi/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Isten hozott Chrestomanci világában! – Újból megjelent Diana Wynne Jones klasszikussa",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/isten-hozott-chrestomanci-vilagaban-ujbol-megjelent-diana-wynne-jones-klasszikussa/",
+      "title": "Nemzetközi fesztiválon debütál a Sirokkó című magyar-marokkói koprodukció",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/nemzetkozi-fesztivalon-debutal-a-sirokko-cimu-magyar-marokkoi-koprodukcio/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Átadták a 2026-os Nők Lapja Irodalmi Díjakat",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/atadtak-a-2026-os-nok-lapja-irodalmi-dijakat/",
+      "title": "Frenreisz Károly 80 éves",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/frenreisz-karoly-80-eves/",
       "images": [
         {
           "kind": "cover",
@@ -78,26 +78,6 @@
         {
           "kind": "p2",
           "filename": "3_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Hétvégi filmklub: Martin McDonagh – Vadló kilenc (2026)",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/hetvegi-filmklub-martin-mcdonagh-vadlo-kilenc-2026/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "4_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "4_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "4_p2.jpg"
         }
       ]
     }
