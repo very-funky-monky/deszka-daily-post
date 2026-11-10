@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 08.",
+  "target_date": "2026. 11. 09.",
   "items": [
     {
-      "title": "Hogyan lopja, majd veszíti el a karácsonyt a Grincs?",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/hogyan-lopja-majd-vesziti-el-a-karacsonyt-a-grincs/",
+      "title": "Nem számít szentségtörésnek – Kritika a Czillei és a Hunyadiak című előadásról",
+      "author": "Ráth Orsolya",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/nem-szamit-szentsegtoresnek-kritika-a-czillei-es-a-hunyadiak-cimu-eloadasrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Megérkeztek a Művészetek Völgye 2027 első fellépői",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/megerkeztek-a-muveszetek-volgye-2027-elso-fellepoi/",
+      "title": "Kalandok az ókori Egyiptom földjén – Megérkezett az Ulysses Moore-sorozat második része",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/kalandok-az-okori-egyiptom-foldjen-megerkezett-az-ulysses-moore-sorozat-masodik-resze/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Nemzetközi fesztiválon debütál a Sirokkó című magyar-marokkói koprodukció",
+      "title": "drMáriás új kiállítása a mennyországba repíti a közélet szereplőit",
       "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/nemzetkozi-fesztivalon-debutal-a-sirokko-cimu-magyar-marokkoi-koprodukcio/",
+      "rovat": "Képzőművészet",
+      "url": "https://deszkavizio.hu/drmarias-uj-kiallitasa-a-mennyorszagba-repiti-a-kozelet-szereploit/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Frenreisz Károly 80 éves",
+      "title": "A Palo Canto is esélyes az idei Music Moves Europe díjára",
       "author": "Bánfi Benedek",
       "rovat": "Zene",
-      "url": "https://deszkavizio.hu/frenreisz-karoly-80-eves/",
+      "url": "https://deszkavizio.hu/a-palo-canto-is-eselyes-az-idei-music-moves-europe-dijara/",
       "images": [
         {
           "kind": "cover",
