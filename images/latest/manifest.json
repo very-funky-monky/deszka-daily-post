@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 11.",
+  "target_date": "2026. 11. 12.",
   "items": [
     {
-      "title": "A hét könyve – Lars Fr. H. Svendsen: Hülyék, idióták és hülye idióták",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-het-konyve-lars-fr-h-svendsen-hulyek-idiotak-es-hulye-idiotak/",
+      "title": "Koncertdömping és adventi varázslat a Várkert Bazárban",
+      "author": "Molnár Dóra",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/koncertdomping-es-adventi-varazslat-a-varkert-bazarban/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Erős felhozatallal készül idén a Sziget",
+      "title": "11 év után visszatér a The Neighbourhood Magyarországra",
       "author": "Bánfi Benedek",
       "rovat": "Zene",
-      "url": "https://deszkavizio.hu/eros-felhozatallal-keszul-iden-a-sziget/",
+      "url": "https://deszkavizio.hu/11-ev-utan-visszater-a-the-neighbourhood-magyarorszagra/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "POPZAJLÁS Spotlight: kisbetűs ünnepnapok – Felém futnak a pókok",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/popzajlas-spotlight-kisbetus-unnepnapok-felem-futnak-a-pokok/",
+      "title": "Több mint 140 millió forintot ítéltek meg a fővárosi függetleneknek",
+      "author": "Flaisz János",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/tobb-mint-140-millio-forinttal-tamogatjak-a-fovarosi-fuggetleneket/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Palya Bea 50 éves",
-      "author": "Bánfi Benedek",
+      "title": "Nyílt napot tart a Liszt Ferenc Zeneművészeti Egyetem",
+      "author": "Flaisz János",
       "rovat": "Zene",
-      "url": "https://deszkavizio.hu/palya-bea-50-eves/",
+      "url": "https://deszkavizio.hu/nyilt-napot-tart-a-liszt-ferenc-zenemuveszeti-egyetem/",
       "images": [
         {
           "kind": "cover",
@@ -78,26 +78,6 @@
         {
           "kind": "p2",
           "filename": "3_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Kulka János 68 éves",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/kulka-janos-68-eves/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "4_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "4_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "4_p2.jpg"
         }
       ]
     }
