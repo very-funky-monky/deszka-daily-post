@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 13.",
+  "target_date": "2026. 11. 14.",
   "items": [
     {
-      "title": "“Szeretem, ha egy darabot nem lehet egy műfajba besorolni” – Interjú Horváth Illéssel",
-      "author": "Flaisz János",
+      "title": "Dinnyét a kenyérrel – Kritika a Lakógyűlés musicalről",
+      "author": "Ráth Orsolya",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/szeretem-ha-egy-darabot-nem-lehet-egy-mufajba-besorolni-interju-horvath-illessel/",
+      "url": "https://deszkavizio.hu/dinnyet-a-kenyerrel-kritika-a-lakogyules-musicalrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Ismét Magyarországra érkezik a norvég Marie Aubert",
+      "title": "A válás csak a kezdet – Folytatást kapott Jeneva Rose thrillere",
       "author": "Flaisz János",
       "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/ismet-magyarorszagra-erkezik-a-norveg-marie-aubert/",
+      "url": "https://deszkavizio.hu/a-valas-csak-a-kezdet-folytatast-kapott-jeneva-rose-thrillere/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Marilyn Monroe életét dolgozza fel a Szegedi Kortárs Balett",
-      "author": "Flaisz János",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/marilyn-monroe-eletet-dolgozza-fel-a-szegedi-kortars-balett/",
+      "title": "Hétvégi Filmklub: Nathan Fielder, Lance Oppenheim – Mindent láthattok (2026)",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/hetvegi-filmklub-nathan-fielder-lance-oppenheim-mindent-lathattok-2026/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Holnap indul a 15. Sissi Őszi Tánchét",
+      "title": "Alföldi Róbert rendezésében érkezik a Closer a Centrál Színházba",
       "author": "Flaisz János",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/holnap-indul-a-15-sissi-oszi-tanchet/",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/alfoldi-robert-rendezeseben-erkezik-a-close-a-central-szinhazba/",
       "images": [
         {
           "kind": "cover",
