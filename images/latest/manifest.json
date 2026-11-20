@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 18.",
+  "target_date": "2026. 11. 19.",
   "items": [
     {
-      "title": "A hét könyve – Han Kang: Nem válunk szét",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-het-konyve-han-kang-nem-valunk-szet/",
+      "title": "Kibogozni – kritika a Magyar Copperfieldről",
+      "author": "Bánfi Benedek",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/kibogozni-kritika-a-magyar-copperfieldrol/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Szakmai délutánt rendez a Ludwig Kader ATTIA részvételével",
-      "author": "Malik Andrea",
-      "rovat": "Képzőművészet",
-      "url": "https://deszkavizio.hu/szakmai-delutant-rendez-a-ludwig-kader-attia-reszvetelevel/",
+      "title": "Rádiójáték idézi fel Ervin Gábor vértanú pap tevékenységét",
+      "author": "Molnár Dóra",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/radiojatek-idezi-fel-ervin-gabor-vertanu-pap-tevekenyseget/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "A pop felfalta a gitárzenét vacsorára – a Sziget előadóinak vizsgálata három évtizeden keresztül",
+      "title": "Tavasszal visszatér a Csinibaba Táncdalfesztivál a Budapest Parkba",
       "author": "Bánfi Benedek",
       "rovat": "Zene",
-      "url": "https://deszkavizio.hu/a-pop-felfalta-a-gitarzenet-vacsorara-a-sziget-eloadoinak-vizsgalata-harom-evtizeden-keresztul/",
+      "url": "https://deszkavizio.hu/tavasszal-visszater-a-csinibaba-tancdalfesztival-a-budapest-parkba/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Öt elsőfilmes alkotó projektje folytatódhat a Nemzeti Filmintézet támogatásával",
+      "title": "Jön a 11. Európai Art Mozi Nap az Urániába",
       "author": "Molnár Dóra",
       "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/ot-elsofilmes-alkoto-projektje-folytatodhat-a-nemzeti-filmintezet-tamogatasaval/",
+      "url": "https://deszkavizio.hu/jon-a-11-europai-art-mozi-nap-az-uraniaba/",
       "images": [
         {
           "kind": "cover",
