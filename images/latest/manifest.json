@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 19.",
+  "target_date": "2026. 11. 20.",
   "items": [
     {
-      "title": "Kibogozni – kritika a Magyar Copperfieldről",
-      "author": "Bánfi Benedek",
+      "title": "“Ritka, hogy egy ilyen eposzi jellegű hőssé válást élőben láthassunk” – Interjú Szervét Tiborral",
+      "author": "Flaisz János",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/kibogozni-kritika-a-magyar-copperfieldrol/",
+      "url": "https://deszkavizio.hu/ritka-hogy-egy-ilyen-eposzi-jellegu-hosse-valast-eloben-lathassunk-interju-szervet-tiborral/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Rádiójáték idézi fel Ervin Gábor vértanú pap tevékenységét",
+      "title": "Dokumentumfilm készül Pogány Indulóról",
       "author": "Molnár Dóra",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/radiojatek-idezi-fel-ervin-gabor-vertanu-pap-tevekenyseget/",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/dokumentumfilm-keszul-pogany-indulorol/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Tavasszal visszatér a Csinibaba Táncdalfesztivál a Budapest Parkba",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/tavasszal-visszater-a-csinibaba-tancdalfesztival-a-budapest-parkba/",
+      "title": "A gyerekkor elveszett dallamai – Karin Smirnoff új regényében sem kíméli az olvasót",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-gyerekkor-elveszett-dallamai-karin-smirnoff-uj-regenyeben-sem-kimeli-az-olvasot/",
       "images": [
         {
           "kind": "cover",
@@ -62,10 +62,10 @@
       ]
     },
     {
-      "title": "Jön a 11. Európai Art Mozi Nap az Urániába",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/jon-a-11-europai-art-mozi-nap-az-uraniaba/",
+      "title": "Megérkezett GAB második nagylemeze",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/megerkezett-gab-masodik-nagylemeze/",
       "images": [
         {
           "kind": "cover",
