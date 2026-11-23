@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 21.",
+  "target_date": "2026. 11. 22.",
   "items": [
     {
-      "title": "Szabadság és szenvedély a szekérkerekek árnyékában – Megnéztük az Esthajnalt",
-      "author": "Flaisz János",
+      "title": "„Nem csak toljuk a hülyeséget, az előadásnak erős emberi vonala is van” – interjú Szabó Győzővel",
+      "author": "Steindl Gabriella",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/szabadsag-es-szenvedely-a-szekerkerekek-arnyekaban-megneztuk-az-esthajnalt/",
+      "url": "https://deszkavizio.hu/nem-csak-toljuk-a-hulyeseget-az-eloadasnak-eros-emberi-vonala-is-van-interju-szabo-gyozovel/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Eric Clapton jövőre visszatér Budapestre",
-      "author": "Bánfi Benedek",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/eric-clapton-jovore-visszater-budapestre/",
+      "title": "Megjelent Dragomán György új novelláskötete",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/megjelent-dragoman-gyorgy-uj-novellaskotete/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Hétvégi Filmklub: Lance Oppenheim – Primetime – Vadászidő (2026)",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/hetvegi-filmklub-lance-oppenheim-primetime-vadaszido-2026/",
+      "title": "Különleges esttel ünneplik a 100 éves Micimackót",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/kulonleges-esttel-unneplik-a-100-eves-micimackot/",
       "images": [
         {
           "kind": "cover",
@@ -58,26 +58,6 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Az ország több pontján is látható lesz a Volt egyszer egy… NEW YORK",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/az-orszag-tobb-pontjan-is-lathato-lesz-a-volt-egyszer-egy-new-york/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "3_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "3_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "3_p2.jpg"
         }
       ]
     }
