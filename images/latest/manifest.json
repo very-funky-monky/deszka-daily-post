@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 23.",
+  "target_date": "2026. 11. 24.",
   "items": [
     {
-      "title": "Naná, hogy nem hajlik giccsbe! – kritika az Esőember című előadásról",
-      "author": "Ráth Orsolya",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/nana-hogy-nem-hajlik-giccsbe-kritika-az-esoember-cimu-eloadasrol/",
+      "title": "Közös előadást tart a Magyar Állami Népi Együttes, a Bagossy Brothers Company és a Parno Graszt",
+      "author": "Bánfi Benedek",
+      "rovat": "Tánc",
+      "url": "https://deszkavizio.hu/kozos-eloadast-tart-a-magyar-allami-nepi-egyuttes-a-bagossy-brothers-company-es-a-parno-graszt/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Nyilvánossá vált a We Will Rock You szegedi szereposztása",
+      "title": "A világ legjobb kutyája – Tizennégy sikerszerző vall saját kedvencéről",
       "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/nyilvanossa-valt-a-we-will-rock-you-szegedi-szereposztasa/",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-vilag-legjobb-kutyaja-tizennegy-sikerszerzo-vall-sajat-kedvencerol/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Házasság, válás, és ami utána jön – Elolvastuk Belle Burden rendhagyó memoárját",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/hazassag-valas-es-ami-utana-jon-elolvastuk-belle-burden-rendhagyo-memoarjat/",
+      "title": "10 napig lehet bulizni Kőbánya pincerendszerében",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/10-napig-lehet-bulizni-kobanya-pincerendszereben/",
       "images": [
         {
           "kind": "cover",
@@ -58,26 +58,6 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Pokorny Lia 55 éves",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/pokorny-lia-55-eves/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "3_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "3_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "3_p2.jpg"
         }
       ]
     }
