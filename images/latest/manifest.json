@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 24.",
+  "target_date": "2026. 11. 25.",
   "items": [
     {
-      "title": "Közös előadást tart a Magyar Állami Népi Együttes, a Bagossy Brothers Company és a Parno Graszt",
-      "author": "Bánfi Benedek",
-      "rovat": "Tánc",
-      "url": "https://deszkavizio.hu/kozos-eloadast-tart-a-magyar-allami-nepi-egyuttes-a-bagossy-brothers-company-es-a-parno-graszt/",
+      "title": "A hét könyve – Trude Marstein: Saját gyerekek",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/a-het-konyve-trude-marstein-sajat-gyerekek/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "A világ legjobb kutyája – Tizennégy sikerszerző vall saját kedvencéről",
-      "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-vilag-legjobb-kutyaja-tizennegy-sikerszerzo-vall-sajat-kedvencerol/",
+      "title": "Három új bemutatóval készül az Örkény Színház az év végére",
+      "author": "Molnár Dóra",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/harom-uj-bemutatoval-keszul-az-orkeny-szinhaz-az-ev-vegere/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "10 napig lehet bulizni Kőbánya pincerendszerében",
+      "title": "POPZAJLÁS Spotlight: Lil 404 x Corneus: NEM ALHATOK",
       "author": "Bánfi Benedek",
       "rovat": "Zene",
-      "url": "https://deszkavizio.hu/10-napig-lehet-bulizni-kobanya-pincerendszereben/",
+      "url": "https://deszkavizio.hu/popzajlas-spotlight-lil-404-x-corneus-nem-alhatok/",
       "images": [
         {
           "kind": "cover",
@@ -58,6 +58,26 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "DJ Palotai emléke előtt tiszteleg Szabó Márton István első nagyjátékfilmje",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/dj-palotai-emleke-elott-tiszteleg-szabo-marton-istvan-elso-nagyjatekfilmje/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "3_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "3_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "3_p2.jpg"
         }
       ]
     }
