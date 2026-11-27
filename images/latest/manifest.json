@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 25.",
+  "target_date": "2026. 11. 26.",
   "items": [
     {
-      "title": "A hét könyve – Trude Marstein: Saját gyerekek",
+      "title": "Nyomozzatok békében! – Elolvastuk a K.É.Z. sorozat utolsó regényét",
       "author": "Flaisz János",
       "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/a-het-konyve-trude-marstein-sajat-gyerekek/",
+      "url": "https://deszkavizio.hu/nyomozzatok-bekeben-elolvastuk-a-k-e-z-sorozat-utolso-regenyet/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Három új bemutatóval készül az Örkény Színház az év végére",
-      "author": "Molnár Dóra",
+      "title": "Domján Edit és Kaló Flórián emléke előtt tiszteleg az OSZMI új kiállítása",
+      "author": "Flaisz János",
       "rovat": "Színház",
-      "url": "https://deszkavizio.hu/harom-uj-bemutatoval-keszul-az-orkeny-szinhaz-az-ev-vegere/",
+      "url": "https://deszkavizio.hu/domjan-edit-es-kalo-florian-emleke-elott-tiszteleg-az-oszmi-uj-kiallitasa/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "POPZAJLÁS Spotlight: Lil 404 x Corneus: NEM ALHATOK",
-      "author": "Bánfi Benedek",
+      "title": "Grandiózus szólókiadvánnyal jelentkezett Presser Gábor",
+      "author": "Flaisz János",
       "rovat": "Zene",
-      "url": "https://deszkavizio.hu/popzajlas-spotlight-lil-404-x-corneus-nem-alhatok/",
+      "url": "https://deszkavizio.hu/grandiozus-szolokiadvannyal-jelentkezett-presser-gabor/",
       "images": [
         {
           "kind": "cover",
@@ -58,26 +58,6 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
-        }
-      ]
-    },
-    {
-      "title": "DJ Palotai emléke előtt tiszteleg Szabó Márton István első nagyjátékfilmje",
-      "author": "Molnár Dóra",
-      "rovat": "Mozgókép",
-      "url": "https://deszkavizio.hu/dj-palotai-emleke-elott-tiszteleg-szabo-marton-istvan-elso-nagyjatekfilmje/",
-      "images": [
-        {
-          "kind": "cover",
-          "filename": "3_cover.jpg"
-        },
-        {
-          "kind": "p1",
-          "filename": "3_p1.jpg"
-        },
-        {
-          "kind": "p2",
-          "filename": "3_p2.jpg"
         }
       ]
     }
