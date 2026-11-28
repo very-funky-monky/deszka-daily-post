@@ -1,11 +1,11 @@
 {
-  "target_date": "2026. 11. 26.",
+  "target_date": "2026. 11. 27.",
   "items": [
     {
-      "title": "Nyomozzatok békében! – Elolvastuk a K.É.Z. sorozat utolsó regényét",
+      "title": "“Igazán elementáris élményt akarok nyújtani az olvasóknak” – Interjú Stefan Ahnhemmel",
       "author": "Flaisz János",
-      "rovat": "Könyv",
-      "url": "https://deszkavizio.hu/nyomozzatok-bekeben-elolvastuk-a-k-e-z-sorozat-utolso-regenyet/",
+      "rovat": "Színház",
+      "url": "https://deszkavizio.hu/igazan-elementaris-elmenyt-akarok-nyujtani-az-olvasoknak-interju-stefan-ahnhemmel/",
       "images": [
         {
           "kind": "cover",
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "title": "Domján Edit és Kaló Flórián emléke előtt tiszteleg az OSZMI új kiállítása",
-      "author": "Flaisz János",
-      "rovat": "Színház",
-      "url": "https://deszkavizio.hu/domjan-edit-es-kalo-florian-emleke-elott-tiszteleg-az-oszmi-uj-kiallitasa/",
+      "title": "Design karácsonyi vásárral és zenés, táncos programokkal várja az érdeklődőket a Fonó a hétvégén",
+      "author": "Bánfi Benedek",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/design-karacsonyi-vasarral-es-zenes-tancos-programokkal-varja-az-erdeklodoket-a-fono-a-hetvegen/",
       "images": [
         {
           "kind": "cover",
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "title": "Grandiózus szólókiadvánnyal jelentkezett Presser Gábor",
-      "author": "Flaisz János",
-      "rovat": "Zene",
-      "url": "https://deszkavizio.hu/grandiozus-szolokiadvannyal-jelentkezett-presser-gabor/",
+      "title": "Öt tajvani dokumentumfilm érkezik a Corvin Moziba a 10. Taiwan Dox keretében",
+      "author": "Molnár Dóra",
+      "rovat": "Mozgókép",
+      "url": "https://deszkavizio.hu/ot-tajvani-dokumentumfilm-erkezik-a-corvin-moziba-a-10-taiwan-dox-kereteben/",
       "images": [
         {
           "kind": "cover",
@@ -58,6 +58,46 @@
         {
           "kind": "p2",
           "filename": "2_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Ingyenes családi napot tart a Fővárosi Szabó Ervin Könyvtár",
+      "author": "Flaisz János",
+      "rovat": "Könyv",
+      "url": "https://deszkavizio.hu/ingyenes-csaladi-napot-tart-a-fovarosi-szabo-ervin-konyvtar/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "3_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "3_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "3_p2.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Megjelent Barabás Lőrinc új lemeze",
+      "author": "Malik Andrea",
+      "rovat": "Zene",
+      "url": "https://deszkavizio.hu/megjelent-barabas-lorinc-uj-lemeze/",
+      "images": [
+        {
+          "kind": "cover",
+          "filename": "4_cover.jpg"
+        },
+        {
+          "kind": "p1",
+          "filename": "4_p1.jpg"
+        },
+        {
+          "kind": "p2",
+          "filename": "4_p2.jpg"
         }
       ]
     }
